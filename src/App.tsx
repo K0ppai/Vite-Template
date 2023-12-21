@@ -1,12 +1,18 @@
-function App() {
+import NavBar from "./components/NavBar";
+import { Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
+import About from "./pages/About";
 
+function App() {
   return (
     <>
-      <p className="text-red-400 px-1 ">
-        Click on the Vite and React logos to learn more
-      </p>
+      <NavBar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+      </Routes>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
